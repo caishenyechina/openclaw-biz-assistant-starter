@@ -145,6 +145,8 @@ docker run --rm -p 8011:8011 biz-assistant-starter
 - `docs/FAQ.md`
 - `docs/COOP-FLOW.md`
 - `docs/CASE-STUDY-TEMPLATE.md`
+- `docs/TESTIMONIAL-TEMPLATE.md`
+- `docs/PRICING-PAGE-COPY.md`
 - `docs/EN-OVERVIEW.md`
 
 销售中控（半自动）：

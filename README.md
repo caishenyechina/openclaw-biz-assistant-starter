@@ -136,6 +136,11 @@ docker run --rm -p 8011:8011 biz-assistant-starter
 - `docs/CONTRACT-LITE.md`
 - `docs/DELIVERY-REPORT.md`
 
+自动成交推进：
+- `docs/LEAD-TRACKER.md`
+- `docs/FOLLOW-UP-MESSAGES.md`
+- `docs/NO-REPLY-NUDGE.md`
+
 ---
 
 ## 关联仓库（推荐一起看）

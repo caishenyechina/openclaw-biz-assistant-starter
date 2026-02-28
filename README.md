@@ -36,6 +36,17 @@
 
 ## 代码能力（已内置）
 
+### 启动 API（本地）
+
+```powershell
+pip install -r requirements.txt
+uvicorn src.api:app --reload --port 8011
+```
+
+- 健康检查：`GET http://127.0.0.1:8011/health`
+- Swagger：`http://127.0.0.1:8011/docs`
+
+
 - `src/biz_assistant.py`
   - `summarize`：把日志压缩成重点
   - `review`：从 JSON 生成复盘文本

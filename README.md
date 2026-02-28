@@ -34,6 +34,24 @@
 
 ---
 
+## 代码能力（已内置）
+
+- `src/biz_assistant.py`
+  - `summarize`：把日志压缩成重点
+  - `review`：从 JSON 生成复盘文本
+  - `reminder`：输出提醒 payload
+  - `voice-script`：生成语音播报稿
+- `scripts/run-demo.ps1`：一键演示命令
+
+示例：
+
+```powershell
+python .\src\biz_assistant.py summarize --input .\examples\day-log.example.txt --max 3
+python .\src\biz_assistant.py review --input .\examples\review-data.example.json
+```
+
+---
+
 ## 项目结构
 
 ```txt

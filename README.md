@@ -122,6 +122,17 @@ openclaw-biz-assistant-starter/
 
 ---
 
+## 快速部署（Docker）
+
+```bash
+docker build -t biz-assistant-starter .
+docker run --rm -p 8011:8011 biz-assistant-starter
+```
+
+更多 API 调用示例见：`docs/API-EXAMPLES.md`
+
+---
+
 ## 联系方式 / 购买
 
 - QQ：4553377

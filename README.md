@@ -141,6 +141,12 @@ docker run --rm -p 8011:8011 biz-assistant-starter
 - `docs/FOLLOW-UP-MESSAGES.md`
 - `docs/NO-REPLY-NUDGE.md`
 
+销售中控（半自动）：
+- `docs/LEAD-TRACKER.csv`
+- `scripts/followup_engine.py`
+- `scripts/run-sales-control.ps1`
+- `docs/DAILY-SALES-REPORT-TEMPLATE.md`
+
 ---
 
 ## 关联仓库（推荐一起看）

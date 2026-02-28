@@ -141,6 +141,10 @@ docker run --rm -p 8011:8011 biz-assistant-starter
 - `docs/FOLLOW-UP-MESSAGES.md`
 - `docs/NO-REPLY-NUDGE.md`
 
+转化增强：
+- `docs/FAQ.md`
+- `docs/COOP-FLOW.md`
+
 销售中控（半自动）：
 - `docs/LEAD-TRACKER.csv`
 - `scripts/followup_engine.py`
@@ -160,8 +164,8 @@ docker run --rm -p 8011:8011 biz-assistant-starter
 
 ## 联系方式 / 购买
 
-- QQ：4553377
 - Email：4553377@qq.com
+- QQ：4553377
 
 可直接邮件/QQ 留言：
 - 你要模板版 / Pro 版 / 代部署

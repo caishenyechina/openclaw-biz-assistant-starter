@@ -144,6 +144,8 @@ docker run --rm -p 8011:8011 biz-assistant-starter
 转化增强：
 - `docs/FAQ.md`
 - `docs/COOP-FLOW.md`
+- `docs/CASE-STUDY-TEMPLATE.md`
+- `docs/EN-OVERVIEW.md`
 
 销售中控（半自动）：
 - `docs/LEAD-TRACKER.csv`

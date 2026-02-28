@@ -6,11 +6,14 @@ from pathlib import Path
 
 
 def split_sentences(text: str):
-    parts = re.split(r"(?<=[。！？!?\.])\s+|\n+", text.strip())
+    # Robust split on common sentence punctuation for CN/EN text
+    parts = re.split(r"[。！？!?\.]+|\n+", text.strip())
     return [p.strip() for p in parts if p.strip()]
 
 
 def summarize(input_path: Path, max_points: int = 5):
+    if max_points <= 0:
+        raise ValueError("max_points must be > 0")
     text = input_path.read_text(encoding="utf-8")
     lines = split_sentences(text)
     points = lines[:max_points]
@@ -36,6 +39,10 @@ def build_daily_review(input_path: Path):
 
 
 def reminder_payload(text: str, fire_at: str):
+    if not text.strip():
+        raise ValueError("text must not be empty")
+    # best-effort validation for ISO datetime
+    dt.datetime.fromisoformat(fire_at.replace("Z", "+00:00"))
     return {
         "kind": "systemEvent",
         "text": f"【提醒】{text}",

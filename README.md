@@ -133,6 +133,15 @@ docker run --rm -p 8011:8011 biz-assistant-starter
 
 ---
 
+## 关联仓库（推荐一起看）
+
+- China Market Watchdog  
+  https://github.com/caishenyechina/china-market-watchdog
+- Content Automation Pipeline CN  
+  https://github.com/caishenyechina/content-automation-pipeline-cn
+
+---
+
 ## 联系方式 / 购买
 
 - QQ：4553377

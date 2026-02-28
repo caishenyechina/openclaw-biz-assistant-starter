@@ -1,12 +1,27 @@
 from pathlib import Path
 import json
+import logging
+import time
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from pydantic import BaseModel, Field, field_validator
 
 from src.biz_assistant import summarize, build_daily_review, voice_script
+from src.settings import LOG_LEVEL
 
-app = FastAPI(title="Biz Assistant API", version="0.3.0")
+logging.basicConfig(level=getattr(logging, LOG_LEVEL.upper(), logging.INFO))
+logger = logging.getLogger("biz-assistant-api")
+
+app = FastAPI(title="Biz Assistant API", version="0.3.1")
+
+
+@app.middleware("http")
+async def log_requests(request: Request, call_next):
+    start = time.perf_counter()
+    response = await call_next(request)
+    cost_ms = (time.perf_counter() - start) * 1000
+    logger.info("%s %s -> %s (%.2fms)", request.method, request.url.path, response.status_code, cost_ms)
+    return response
 
 
 class TextRequest(BaseModel):
@@ -28,7 +43,7 @@ class ReviewRequest(BaseModel):
 
 @app.get("/health")
 def health():
-    return {"ok": True, "service": "biz-assistant", "version": "0.3.0"}
+    return {"ok": True, "service": "biz-assistant", "version": "0.3.1"}
 
 
 @app.post("/summarize")

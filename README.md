@@ -39,8 +39,21 @@
 ### 启动 API（本地）
 
 ```powershell
-pip install -r requirements.txt
-uvicorn src.api:app --reload --port 8011
+python -m pip install -r requirements.txt
+python -m uvicorn src.api:app --reload --port 8011
+```
+
+### 开发者快速开始
+
+```powershell
+# 1) 跑测试
+powershell -ExecutionPolicy Bypass -File .\scripts\tasks.ps1 -Task test
+
+# 2) 跑 CLI 演示
+powershell -ExecutionPolicy Bypass -File .\scripts\tasks.ps1 -Task run-cli
+
+# 3) 跑 API
+powershell -ExecutionPolicy Bypass -File .\scripts\tasks.ps1 -Task run-api
 ```
 
 - 健康检查：`GET http://127.0.0.1:8011/health`
